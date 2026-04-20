@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap Dev 2026 — Javier</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #f5f4ef;
+    --color-background-tertiary: #eeede8;
+    --color-text-primary: #1a1a18;
+    --color-text-secondary: #6b6a63;
+    --color-text-tertiary: #9c9a92;
+    --color-border-tertiary: rgba(0,0,0,0.12);
+    --color-border-secondary: rgba(0,0,0,0.22);
+    --font-sans: system-ui, -apple-system, sans-serif;
+    --font-mono: 'Courier New', monospace;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background-primary: #1e1e1c;
+      --color-background-secondary: #2a2a28;
+      --color-background-tertiary: #323230;
+      --color-text-primary: #e8e6de;
+      --color-text-secondary: #9c9a92;
+      --color-text-tertiary: #6b6a63;
+      --color-border-tertiary: rgba(255,255,255,0.10);
+      --color-border-secondary: rgba(255,255,255,0.18);
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-background-tertiary);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    max-width: 740px;
+    margin: 0 auto;
+    background: var(--color-background-primary);
+    border-radius: 16px;
+    border: 0.5px solid var(--color-border-tertiary);
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: var(--color-text-tertiary);
+    margin-bottom: 1.5rem;
+  }
+
+  * { box-sizing: border-box; }
+  .rm { padding: 0.5rem 0 1rem; }
+  .phase-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; }
+  .phase-num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+  .phase-title { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
+  .phase-sub { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; margin-bottom: 1.5rem; }
+  .skill-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+  .skill-card:hover { border-color: var(--color-border-secondary); background: var(--color-background-secondary); }
+  .skill-label { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .skill-desc { font-size: 11px; color: var(--color-text-secondary); margin-top: 3px; line-height: 1.4; }
+  .skill-tag { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 20px; margin-top: 5px; font-weight: 500; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 1.5rem 0; }
+  .project-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 20px; padding: 5px 12px; font-size: 12px; color: var(--color-text-secondary); margin: 4px 4px 0 0; cursor: pointer; transition: background 0.15s; text-decoration: none; }
+  .project-pill:hover { background: var(--color-background-tertiary); }
+  .phase-block { margin-bottom: 0; }
+  .timeline-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 1.8rem; }
+  .tbar-seg { height: 4px; border-radius: 2px; flex: 1; }
+  .tbar-label { font-size: 11px; color: var(--color-text-tertiary); white-space: nowrap; }
+  .section-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 8px; }
+  .note-box { background: var(--color-background-secondary); border-left: 2px solid; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Roadmap de desarrollo — 2026</h1>
+  <p class="subtitle">Javier · Web moderno + Mobile · ~12 meses</p>
+
+  <div class="rm">
+    <div class="timeline-bar">
+      <span class="tbar-label">Ahora</span>
+      <div class="tbar-seg" style="background:#534AB7;flex:1.5"></div>
+      <div class="tbar-seg" style="background:#1D9E75;flex:2"></div>
+      <div class="tbar-seg" style="background:#D85A30;flex:2.5"></div>
+      <span class="tbar-label">~12 meses</span>
+    </div>
+
+    <!-- FASE 1 -->
+    <div class="phase-block">
+      <div class="phase-header">
+        <div class="phase-num" style="background:#EEEDFE;color:#3C3489">1</div>
+        <div>
+          <div class="phase-title">JavaScript sólido</div>
+          <div class="phase-sub">Meses 1–3 · Base para todo lo demás</div>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-label">JS moderno (ES6+)</div>
+          <div class="skill-desc">Arrow functions, destructuring, async/await, módulos</div>
+          <span class="skill-tag" style="background:#EEEDFE;color:#3C3489">Crítico</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">DOM &amp; eventos</div>
+          <div class="skill-desc">Manipulación del DOM, event listeners, delegación</div>
+          <span class="skill-tag" style="background:#EEEDFE;color:#3C3489">Crítico</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">Fetch &amp; APIs REST</div>
+          <div class="skill-desc">Consumo de APIs, JSON, manejo de errores</div>
+          <span class="skill-tag" style="background:#E1F5EE;color:#085041">Práctico</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">Git &amp; GitHub</div>
+          <div class="skill-desc">Commits, branches, pull requests básicos</div>
+          <span class="skill-tag" style="background:#E1F5EE;color:#085041">Práctico</span>
+        </div>
+      </div>
+      <div class="section-eyebrow">Proyectos de fase 1</div>
+      <div>
+        <span class="project-pill">⚡ App del clima (API + DOM)</span>
+        <span class="project-pill">🎯 Quiz interactivo</span>
+        <span class="project-pill">💾 Todo list con localStorage</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- FASE 2 -->
+    <div class="phase-block">
+      <div class="phase-header">
+        <div class="phase-num" style="background:#E1F5EE;color:#085041">2</div>
+        <div>
+          <div class="phase-title">Web moderna con animaciones</div>
+          <div class="phase-sub">Meses 3–6 · Páginas estilo 2026, dinámicas y con vida</div>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-label">Animaciones CSS + JS</div>
+          <div class="skill-desc">CSS transitions, keyframes, Web Animations API</div>
+          <span class="skill-tag" style="background:#EEEDFE;color:#3C3489">Estilo 2026</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">GSAP / Motion</div>
+          <div class="skill-desc">Librería para animaciones complejas y scroll</div>
+          <span class="skill-tag" style="background:#EEEDFE;color:#3C3489">Estilo 2026</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">Three.js / fondos 3D</div>
+          <div class="skill-desc">WebGL, partículas, fondos interactivos</div>
+          <span class="skill-tag" style="background:#FAECE7;color:#712B13">Avanzado</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">React (componentes)</div>
+          <div class="skill-desc">State, props, hooks básicos — ya tienes Astro, esto fluye</div>
+          <span class="skill-tag" style="background:#E1F5EE;color:#085041">Con base</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">Backend simple</div>
+          <div class="skill-desc">Supabase, autenticación, base de datos en la nube</div>
+          <span class="skill-tag" style="background:#E1F5EE;color:#085041">Práctico</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">Scroll animations</div>
+          <div class="skill-desc">Intersection Observer, parallax, reveal effects</div>
+          <span class="skill-tag" style="background:#EEEDFE;color:#3C3489">Estilo 2026</span>
+        </div>
+      </div>
+      <div class="section-eyebrow">Proyectos de fase 2</div>
+      <div>
+        <span class="project-pill">🎨 Tu portfolio con animaciones</span>
+        <span class="project-pill">🌐 Landing page con fondo 3D</span>
+        <span class="project-pill">🚀 SaaS landing page</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- FASE 3 -->
+    <div class="phase-block">
+      <div class="phase-header">
+        <div class="phase-num" style="background:#FAECE7;color:#712B13">3</div>
+        <div>
+          <div class="phase-title">Desarrollo móvil</div>
+          <div class="phase-sub">Meses 6–12 · Apps nativas con SwiftUI (ya tienes base)</div>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-label">SwiftUI intermedio</div>
+          <div class="skill-desc">Navigation, listas, formularios, bindings complejos</div>
+          <span class="skill-tag" style="background:#FAECE7;color:#712B13">Tienes base</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">SwiftData / Core Data</div>
+          <div class="skill-desc">Persistencia local en apps iOS</div>
+          <span class="skill-tag" style="background:#EEEDFE;color:#3C3489">Crítico</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">APIs desde iOS</div>
+          <div class="skill-desc">URLSession, Codable, async/await en Swift</div>
+          <span class="skill-tag" style="background:#EEEDFE;color:#3C3489">Crítico</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-label">App Store deployment</div>
+          <div class="skill-desc">Signing, TestFlight, proceso de review</div>
+          <span class="skill-tag" style="background:#E1F5EE;color:#085041">Meta real</span>
+        </div>
+      </div>
+      <div class="section-eyebrow">Proyectos de fase 3</div>
+      <div>
+        <span class="project-pill">📱 App útil para publicar</span>
+        <span class="project-pill">🔗 App + Supabase backend</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="note-box" style="border-color:#534AB7">
+      <strong style="color:var(--color-text-primary)">Sobre los cursos de Udemy</strong> — el problema no es la plataforma, es que los cursos genéricos no saben de dónde vienes. Tú ya tienes HTML/CSS, Tailwind, Astro y algo de iOS. Tienes que buscar cursos intermedios específicos, no "aprende desde cero".
+    </div>
+  </div>
+</div>
+</body>
+</html>
